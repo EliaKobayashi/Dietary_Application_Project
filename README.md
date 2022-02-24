@@ -25,6 +25,8 @@ For the application, we will be using the Python language, as according to Codin
 
 ### Details
 
+When first opening the application, a log in or sign up option will be displayed. There will be cartoon drawings of nutritious foods as decorations. Once signed up, an option to log the PFC intakes or monitor the PFC will be displayed. If you were to log the PFC intakes, there will be three white boxes where you input the protein, fat, and calories intakes. If you were to monitor the PFC intakes, a calendar with dates will appear. Once clicking on a date, the PFC intakes of that particular date will be displayed. 
+
 ### Citations
 
 1. Wali, K., Ramnani, M., Krishna, S., &amp; Chatterjee, P. (2021, May 29). 8 python GUI frameworks for developers. Analytics India Magazine. Retrieved February 24, 2022,
