@@ -1,5 +1,7 @@
 # Unit 3 Project: PFC Application Documentation
 
+![](ham-meat-with-vegetables-vector-2142216.jpg)
+
 ## Criteria A: Planning
 
 ### Problem Definition:
