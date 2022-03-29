@@ -66,6 +66,12 @@ As shown in figure 4, the two tables represent the two classes and the attribute
 
 ### UML Diagram
 
+![](IMG_075A442B8F7F-1.jpeg)
+
+Figure 5. The UML Diagram For the Classes In the Application
+
+As shown in figure 5. the UML diagram shows the attribuites and the methods for the two classes. There are only "get" methods as the application's function is only to store data display it at the request of the users.
+
 ### Flow Diagrams
 
 ### Test Plan
