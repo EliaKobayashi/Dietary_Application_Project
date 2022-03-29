@@ -35,3 +35,17 @@ When first opening the application, a log in or sign up option will be displayed
 2. What is KivyMD: Creating android machine learning apps using KivyMD. Analytics Vidhya. (2021, July 6). Retrieved February 24, 2022,
 3. What is sqlite? top sqlite features you should know. SQLite Tutorial. (2020, July 8). Retrieved March 9, 2022
 4. Why learn python? 6 reasons why it's so hot right now. CodingNomads. (2022, January 19). Retrieved February 24, 2022, 
+
+## Criteria B: Solution Overview
+
+### System Diagram
+
+
+
+### ER
+
+![](IMG_0112.JPG)
+
+### Table of Data
+
+![](IMG_0113.JPG)
