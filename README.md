@@ -40,23 +40,29 @@ When first opening the application, a log in or sign up option will be displayed
 
 ### System Diagram
 
+![](IMG_24D3DE2350F2-1.jpeg)
+
+Figure 1. The System Diagram For the Proposed Solution
+
+As shown in Fig.1, the proposed solution runs on Python and a KivyMD library. Furthermore, it is developed using Pycharm. The proposed application has 12 inputs which vary from personal information, login information, and daily nutrients information. The application will use SQLite as the database. The output will be a calender screen. If the user clicks on a date, the nurtients information of the date will be displayed.
+
 ### Wireframe
 
 ### ER
 
 ![](IMG_0112.JPG)
 
-Figure 2. ER Diagram For the Attributes Requested By the Client
+Figure 3. ER Diagram For the Attributes Requested By the Client
 
-As shown in figure 2, in the "meal" class, the attributes are "protein", "fats", "calories", "carbohydrates", "days", and "meal". This class details all the nutrients that the client would like to log into the application. The second class which is "User" has the attributes "password", "name", "age", "Residence", "Dietary_restrictions", and "Username". This class details personal information as well as log in information of the users.
+As shown in figure 3, in the "meal" class, the attributes are "protein", "fats", "calories", "carbohydrates", "days", and "meal". This class details all the nutrients that the client would like to log into the application. The second class which is "User" has the attributes "password", "name", "age", "Residence", "Dietary_restrictions", and "Username". This class details personal information as well as log in information of the users.
 
 ### Table of Data
 
 ![](IMG_0113.JPG)
 
-Figure 3. A Table Representing the Data In the ER Diagram
+Figure 4. A Table Representing the Data In the ER Diagram
 
-The two tables represent the two classes and the attributes in the classes shown in the ER diagram. Furthermore, the data in the second row of each table showcase all the inputs of each attribute, such as the personal information, the log in information, and the nutrients infomration of March 2nd of the client. 
+As shown in figure 4, the two tables represent the two classes and the attributes in the classes shown in the ER diagram. Furthermore, the data in the second row of each table showcase all the inputs of each attribute, such as the personal information, the log in information, and the nutrients infomration of March 2nd of the client. 
 
 ### UML Diagram
 
