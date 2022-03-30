@@ -42,11 +42,17 @@ When first opening the application, a log in or sign up option will be displayed
 
 ![](IMG_24D3DE2350F2-1.jpeg)
 
-Figure 1. The System Diagram For the Proposed Solution
+Figure 1. The System Diagram For the Application
 
 As shown in Fig.1, the proposed solution runs on Python and a KivyMD library. Furthermore, it is developed using Pycharm. The proposed application has 12 inputs which vary from personal information, login information, and daily nutrients information. The application will use SQLite as the database. The output will be a calender screen. If the user clicks on a date, the nurtients information of the date will be displayed.
 
 ### Wireframe
+
+![](IMG_8F27C8BFD312-1.jpeg)
+
+Figure 2. The Wire Frame For the Application
+
+As shown in Fig.2, the wire frame details the plan as to how the application will look. The app will open with a log in page. If the register button is clicked, the user will be able to register by inputing their chosen username, email, and password. Once the register button is clicked, it will redirect the user to the login page. Once logged in, the user is directed to the home screen where they can pick to input their nutrients intake or monitor their daily intake. Once the input button is clicked, the user logs the date, protein, fats, carbohydrates, and calories intakes. Once the user clicks the log button, they are redirected to the monitor page. If a date is clicked, the nutrients intake of the day is displayed. Once the application is closed, the user will see the login page when re-opened.
 
 ### ER
 
