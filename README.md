@@ -80,6 +80,10 @@ As shown in figure 5. the UML diagram shows the attribuites and the methods for 
 
 ### Flow Diagrams
 
+![](IMG_81C7C3AF6268-1.jpeg)
+
+Figure 6. The flow diagram for when users try loggin in. If the password is correct, they are directed to the home page. On the other hand, if the password is incorrect, it prints out "User does not exist".
+
 ### Test Plan
 
 ### Record of Tasks
