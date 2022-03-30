@@ -84,3 +84,21 @@ As shown in figure 5. the UML diagram shows the attribuites and the methods for 
 
 ### Record of Tasks
 
+| Task No. | Planned Action                                           | Time Estimate | Target Completion Date | Criteria |
+|----------|----------------------------------------------------------|---------------|------------------------|----------|
+| 1        | Brainstorm and write the problem definition              | 15 mins       | February 28            | A        |
+| 2        | Brainstorm and write the success criteria                | 15 mins       | February 28            | A        |
+| 3        | Brainstorm and write the design statement                | 20 mins       | March 2                | A        |
+| 4        | Brainstorm and write the rationale for proposed solution | 30 mins       | March 2                | A        |
+| 5        | Write citations                                          | 15 mins       | March 2                | A        |
+| 6        | Write the details of the application                     | 20 mins       | March 2                | A        |
+| 7        | Draw and describe the ER diagram                         | 20 mins       | March 4                | B        |
+| 8        | Draw and describe the table of data                      | 15 mins       | March 4                | B        |
+| 9        | Draw and describe the UML diagram                        | 15 mins       | March 4                | B        |
+| 10       | Code the log in screen                                   | 1 hour        | March 7                | C        |
+| 11       | Code the register screen                                 | 1 hour        | March 9                | C        |
+| 12       | Code switches between screens                            | 30 mins       | March 10               | C        |
+| 13       | Code inserting inputs of the user to the databse         | 50 mins       | March 10               | C        |
+| 14       | Code the encryption of passwords using hash              | 40 mins       | March 28               | C        |
+| 15       | Fix up the register screen                               | 15 mins       | March 30               | C        |
+| 16       | Fix up the hash password encryption                      | 15 mins       | March 30               | C        |
