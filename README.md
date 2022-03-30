@@ -54,7 +54,7 @@ Figure 2. The Wire Frame For the Application
 
 As shown in Fig.2, the wire frame details the plan as to how the application will look. The app will open with a log in page. If the register button is clicked, the user will be able to register by inputing their chosen username, email, and password. Once the register button is clicked, it will redirect the user to the login page. Once logged in, the user is directed to the home screen where they can pick to input their nutrients intake or monitor their daily intake. Once the input button is clicked, the user logs the date, protein, fats, carbohydrates, and calories intakes. Once the user clicks the log button, they are redirected to the monitor page. If a date is clicked, the nutrients intake of the day is displayed. Once the application is closed, the user will see the login page when re-opened.
 
-### ER
+### ER Diagram
 
 ![](IMG_0112.JPG)
 
