@@ -48,7 +48,7 @@ As shown in Fig.1, the proposed solution runs on Python and a KivyMD library. Fu
 
 ### Wireframe
 
-![](IMG_8F27C8BFD312-1.jpeg)
+![](IMG_D7F868871A05-1.jpeg)
 
 Figure 2. The Wire Frame For the Application
 
