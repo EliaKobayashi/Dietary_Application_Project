@@ -89,6 +89,8 @@ Figure 6. The flow diagram for when users try loggin in. If the password is corr
 
 Figure 7. The flow diagram is for calculating the average and total calories according to the database. There is a button on the screen titled "calculate calories". When pressed, the total and average calories poop up.
 
+![](3_flowdiagram3.jpeg)
+
 ### Test Plan
 
 ### Record of Tasks
