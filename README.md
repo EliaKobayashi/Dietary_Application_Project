@@ -49,7 +49,7 @@ As shown in Fig.1, the proposed solution runs on Python and a KivyMD library. Fu
 ### Wireframe
 
 Change the wireframe
-![](IMG_D7F868871A05-1.jpeg)
+![](wireframe.jpeg)
 
 Figure 2. The Wire Frame For the Application
 
