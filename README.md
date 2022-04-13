@@ -57,7 +57,7 @@ As shown in Fig.2, the wire frame details the plan as to how the application wil
 
 ### ER Diagram
 
-![](IMG_0112.JPG)
+![](erdiagram.jpeg)
 
 Figure 3. ER Diagram For the Attributes Requested By the Client
 
