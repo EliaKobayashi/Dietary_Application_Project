@@ -73,7 +73,7 @@ As shown in figure 4, the two tables represent the two classes and the attribute
 
 ### UML Diagram
 
-![](IMG_075A442B8F7F-1.jpeg)
+![](umldiagram.jpeg)
 
 Figure 5. The UML Diagram For the Classes In the Application
 
