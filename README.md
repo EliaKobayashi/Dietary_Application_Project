@@ -65,11 +65,11 @@ As shown in figure 3, in the "nutrients" table, the attributes are "protein", "f
 
 ### Table of Data
 
-![](IMG_0113.JPG)
+![](table_comp.jpeg)
 
 Figure 4. A Table Representing the Data In the ER Diagram
 
-As shown in figure 4, the two tables represent the two classes and the attributes in the classes shown in the ER diagram. Furthermore, the data in the second row of each table showcase all the inputs of each attribute, such as the personal information, the log in information, and the nutrients infomration of March 2nd of the client. 
+As shown in figure 4, the two tables represent the two classes and the attributes in the classes shown in the ER diagram. Furthermore, the data in the second row of each table showcase all the inputs of each attribute, such as the personal information, the log in information, and the nutrients infomration of logged in March 2 of the client. 
 
 ### UML Diagram
 
