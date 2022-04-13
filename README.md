@@ -85,6 +85,10 @@ As shown in figure 5. the UML diagram shows the attribuites and the methods for 
 
 Figure 6. The flow diagram for when users try loggin in. If the password is correct, they are directed to the home page. On the other hand, if the password is incorrect, it prints out "User does not exist".
 
+![](3_flowdiagram2.jpeg)
+
+Figure 7. The flow diagram is for calculating the average and total calories according to the database. There is a button on the screen titled "calculate calories". When pressed, the total and average calories poop up.
+
 ### Test Plan
 
 ### Record of Tasks
