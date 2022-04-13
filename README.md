@@ -53,7 +53,7 @@ Change the wireframe
 
 Figure 2. The Wire Frame For the Application
 
-As shown in Fig.2, the wire frame details the plan as to how the application will look. The app will open with a log in page. If the register button is clicked, the user will be able to register by inputing their chosen username, email, and password. Once the register button is clicked, it will redirect the user to the login page. Once logged in, the user is directed to the home screen where they can pick to input their nutrients intake or monitor their daily intake. Once the input button is clicked, the user logs the date, protein, fats, carbohydrates, and calories intakes. Once the user clicks the log button, they are redirected to the monitor page. If a date is clicked, the nutrients intake of the day is displayed. The user then has the option to be redirected to the monitoring calendar or the login screen. Once the application is closed, the user will see the login page when re-opened.
+As shown in Fig.2, the wire frame details the plan as to how the application will look. The app will open with a log in page. If the register button is clicked, the user will be able to register by inputing their chosen username, email, and password. Once the register button is clicked, it will redirect the user to the home page. Next, the user can pick to input their nutrients intake, monitor their daily intake, or log out. Once the input button is clicked, the user logs the date, protein, fats, carbohydrates, and calories intakes. Once the user clicks the log button, they are redirected to the home page. If the table screen is selected where users can see all the logged nutrients informations. Users also have the option to calculate the total and average calories. Then, users can click the back button where they are directed to the homepage.
 
 ### ER Diagram
 
@@ -61,7 +61,7 @@ As shown in Fig.2, the wire frame details the plan as to how the application wil
 
 Figure 3. ER Diagram For the Attributes Requested By the Client
 
-As shown in figure 3, in the "meal" class, the attributes are "protein", "fats", "calories", "carbohydrates", "days", and "meal". This class details all the nutrients that the client would like to log into the application. The second class which is "User" has the attributes "password", "name", "age", "Residence", "Dietary_restrictions", and "Username". This class details personal information as well as log in information of the users.
+As shown in figure 3, in the "nutrients" table, the attributes are "protein", "fats", "calories", "carbohydrates", "day_picked". This table details all the nutrients that the client would like to log into the application. The second class which is "User" has the attributes "id", "username", "email", "password". This class details the email and information as well as log in information of the users.
 
 ### Table of Data
 
