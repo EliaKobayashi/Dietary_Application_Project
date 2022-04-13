@@ -91,6 +91,8 @@ Figure 7. The flow diagram is for calculating the average and total calories acc
 
 ![](3_flowdiagram3.jpeg)
 
+Figure 8. The flow diagram is for the query functions. "query_user" is for verifying if the password entered in the login screen is correct to their email. Meanwhile, "query_files" is for fetching all the data from the "nutrient" table and will be put in the Table Screen.
+
 ### Test Plan
 
 ### Record of Tasks
