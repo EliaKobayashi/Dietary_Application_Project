@@ -327,8 +327,6 @@ The method create_new_input is used later in the input screen to input new value
         self.parent.current = "HomePage"
 ```
 For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value(date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
-### Hash Password
-
 ### Creating the Login System
 
 ```.py
@@ -348,3 +346,58 @@ For the nutrient table, I am saving the values inputted by the users in the inpu
             self.ids.login_label.text = "User does not exist"
 ```
 To log in, I created a system so that the method checks whether the inputted email is in the database. If it is not, the title text changed to "User does not exist". If the email is correct, the method checks if the password is correct and corresponding to the email. If it does not, the title text changes to "password is incorrect", If the password is correct, the screen changed to the home page.
+### Creating the Home Page
+
+```.py
+# Class for home page screen
+class HomePage(MDScreen):
+    # Function for the screen to change to the login screen
+
+    def go_to_login(self):
+        self.parent.current = "LoginScreen"
+    # Function for the screen to change to the input screen
+
+    def go_to_InputScreen(self):
+        self.parent.current = "InputScreen"
+    # Function for the screen to change to the monitor screen
+
+    def go_to_MonitorScreen(self):
+        self.parent.current = "MonitorScreen"
+    # Function for the screen to change to the table screen
+
+    def go_to_TableScreen(self):
+        self.parent.current = "TableScreen"
+```
+The home page is quite simple with only four buttons. The first changing the screen to the Login screen. The second changing the screen to the Input screen. The third changing the screen to the Monitor screen. Lastly, changing the screen to the Table screen.
+### Creating the Table Screen
+
+```.py
+class TableScreen(MDScreen):
+    # class attribute
+    data_tables = None
+    # Get data from database
+    def on_pre_enter(self, *args):
+        db = database("app_database.db")
+        query = db.query_files()
+        db.close()
+```
+The code above is to connect the class with the database. Additionally, the query object retrieves all the data from the databases.
+
+```.py
+        self.data_tables = MDDataTable(
+            size_hint=(1, 0.6),
+            pos_hint={"center_x": .5, "top": 0.9},
+            use_pagination=True,
+            check=True,
+            # name column, width column, sorting function column(optional)
+            column_data=[
+                ("protein", 50),
+                ("fats", 30),
+                ("carbohydrates", 50),
+                ("calories", 40),
+                ("date_picked", 60)
+            ],
+            row_data=query
+        )
+```
+Using MDDataTable, the position and size of the table on the screen is determined first. Then, the attributes of the nutrient table is written inside the [] next to the "column_date=". The attributes wrriten above should match the spelling and the order of the attributes in the table. The data in the rows of the table in the screen should match all the values of the nutrient table. To do so, I put all query information in the "row_data".
