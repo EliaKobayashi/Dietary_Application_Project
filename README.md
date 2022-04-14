@@ -122,3 +122,16 @@ Figure 8. The flow diagram is for the query functions. "query_user" is for verif
 | 14       | Code the encryption of passwords using hash              | 40 mins       | March 28               | C        |
 | 15       | Fix up the register screen                               | 15 mins       | March 30               | C        |
 | 16       | Fix up the hash password encryption                      | 15 mins       | March 30               | C        |
+
+## Criteria C: Development
+
+### Techniques Used
+
+1. For loops
+2. If function
+3. Building UI through the KivyMD library
+4. OOP coding with Python
+5. Working with database from SQLite
+6. Connecting KivyMD, Python, and SQLite
+
+### Development
