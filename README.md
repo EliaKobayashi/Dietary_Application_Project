@@ -230,7 +230,9 @@ class RegisterScreen(self):
     pass
     
 class MainApp(MDApp):
-    pass
+    def build(self):
+        pass
 ```
+Although the UI is designed, logic is necessary to make all the functions work. To do so, I created a Python file that compliments the KivyMD file. You need a class for each screen and a class for the app itself. The class names of the screens must match the names of the screens written in the KivyMD file. Meanwhile, the name of the app class must be the same as the name of the KivyMD file. The code above does not include all the methods and objects in my RegisterScreen file. I wrote pass simply to show the logic of the Python file.
 
  
