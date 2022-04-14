@@ -38,7 +38,7 @@ For the application, we will be using the Python language, as according to Codin
 
 ### System Diagram
 
-![](IMG_24D3DE2350F2-1.jpeg)
+![](systemdiagram.png)
 
 Figure 1. The System Diagram For the Application
 
@@ -235,4 +235,116 @@ class MainApp(MDApp):
 ```
 Although the UI is designed, logic is necessary to make all the functions work. To do so, I created a Python file that compliments the KivyMD file. You need a class for each screen and a class for the app itself. The class names of the screens must match the names of the screens written in the KivyMD file. Meanwhile, the name of the app class must be the same as the name of the KivyMD file. The code above does not include all the methods and objects in my RegisterScreen file. I wrote pass simply to show the logic of the Python file.
 
+### Creating Tables
  
+ ```.py
+ # connection to sqlite
+    def __init__(self, name):
+        self.name = name
+        self.connection = sqlite3.connect(self.name)
+        self.cursor = self.connection.cursor()
+     def close(self):
+        self.connection.close()
+```  
+To create tables, I am using sqlite3 as the database. The code above is the conncetion between Python and the sqlite database. The benefits of using sqlite is that it is really easy to use with Python. I simply have to create a class with their attributes in it which will be shown in the next piece of code.
+
+```.py
+   # Function to create a table that includes the login details of a user
+
+    def create(self):
+        self.cursor.execute("""
+        CREATE TABLE if not exists Users(
+        id INTEGER primary key,
+        username VARCHAR(200),
+        email VARCHAR(255) not null unique,
+        password VARCHAR(256) not null
+        );
+        """)
+        self.cursor.execute("""
+        CREATE TABLE if not exists nutrient(
+        protein INTEGER,
+        fats INTEGER,
+        carbohyrdates INTEGER,
+        calories INTEGER,
+        date_picked day
+        );
+        """)
+        self.connection.commit()
+```
+The function above is to create the two tables ("Users", "nutrient") I need based on my diagrams. Each row after inside the paranthesis of a table represents an attribute in the table. The first word is the name of the attribute. After the names of the attributes, the type of attribute is declared. The values are inputted in the LoginScreen class and the InputScreen class.
+### Saving Values Into Tables
+
+```.py
+    def create_new_user(self, username, password, email):
+        self.cursor.execute("INSERT into Users values(?,?,?,?)", (random.randint(1,1000000), username, email, encrypt_password(password)))
+        self.connection.commit()
+```
+The method create_new_user is used later in the register screen to input new values into the Users table
+
+```.py
+    # Function to save the registered information in the database
+    def register(self):
+        email_entered = self.ids.email_register.text
+        username_entered = self.ids.username_register.text
+        password_entered = self.ids.password_register.text
+        db = database("app_database.db")
+        db.create_new_user(username=username_entered, email=email_entered, password=password_entered)
+        db.close()
+        self.parent.current = "HomePage"
+```
+After setting up the tables in the database, we have to put values inside. For User table, this is done in the register method. This is so that when users click the button called register in the Register Screen, the inputted values will be saved in the Users table. By inputting the information inputted by the users in the paranthesis next to "db.create_new_user", values will be saved in the database. 
+
+```.py
+    def create_new_input(self, protein, fats, carbohydrates, calories, date_picked):
+        self.cursor.execute(f"INSERT into nutrient values('{protein}','{fats}','{carbohydrates}','{calories}','{date_picked}');")
+        self.connection.commit()
+```
+The method create_new_input is used later in the input screen to input new values into the nutrient table.
+
+```.py
+    def on_save(self, value):
+        InputScreen.select_date = value
+
+    # Click cancel
+    def on_cancel(self):
+        pass
+
+    def input_date(self):
+        from datetime import datetime
+        date_dialog = MDDatePicker()
+        date_dialog.bind(on_save=self.on_save, on_cancel=self.on_cancel)
+        date_dialog.open()
+
+    def input_data(self):
+        enter_protein = self.ids.input_protein.text
+        enter_fat = self.ids.input_fat.text
+        enter_carb = self.ids.input_carb.text
+        enter_calorie = self.ids.input_calorie.text
+        enter_date = InputScreen.select_date
+        db = database("app_database.db")
+        db.create_new_input(protein=enter_protein, fats=enter_fat, carbohydrates=enter_carb, calories=enter_calorie, date_picked=enter_date)
+        db.close()
+        self.parent.current = "HomePage"
+```
+For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value(date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
+### Hash Password
+
+### Creating the Login System
+
+```.py
+# Function to see if the login information is in the database
+    def try_login(self):
+        input_email = self.ids.email.text
+        input_password = self.ids.password.text
+        db = database("app_database.db")
+        user = db.query_user(email=input_email)
+        if user:
+            id, username, email, hashed_pwd = user
+            if check_password(password = input_password, hashed = hashed_pwd):
+                self.parent.current = "HomePage"
+            else:
+                self.ids.login_label.text = "password is incorrect"
+        else:
+            self.ids.login_label.text = "User does not exist"
+```
+To log in, I created a system so that the method checks whether the inputted email is in the database. If it is not, the title text changed to "User does not exist". If the email is correct, the method checks if the password is correct and corresponding to the email. If it does not, the title text changes to "password is incorrect", If the password is correct, the screen changed to the home page.
