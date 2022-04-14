@@ -135,3 +135,102 @@ Figure 8. The flow diagram is for the query functions. "query_user" is for verif
 6. Connecting KivyMD, Python, and SQLite
 
 ### UI Creating Using KivyMD
+
+```.py
+ScreenManager:
+    id: screen_manager
+    # Names of each screen
+    LoginScreen:
+        id: LoginScreen
+        name: "LoginScreen"
+
+    RegisterScreen:
+        name: "RegisterScreen"
+
+    HomePage:
+        name: "HomePage"
+
+    InputScreen:
+        name: "InputScreen"
+
+    TableScreen:
+        id: TableScreen
+        name: "TableScreen"
+       ```
+The first part of creating the application is to design and code the user interface (UI). The UI allows users to access the program. In the Kivy language (which is what is being used as the KivyMD library is utilized) objects are relative and are layered on top of each other. The code above is to set up all the screens that will be used in the program. 
+
+```.py
+# The build for the register screen
+<RegisterScreen>
+    FitImage:
+        source: 'veg_pic.jpg'
+    # The layout of the screen
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: 1,1
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+```
+The code above is an example of how the design of the screen is first set up. The register screen is one of the 5 screens I have created. Firstly, I refer to the file name of the image I want to set as the background. After placing the jpg file as the background, I create the orientation of the entire screen. The orientation is how objects will be placed in relation to each other. For this application, a vertical orientation is preferred as objects can go below each other.
+
+```.py
+        # A white rectangle to put the buttons, labels, etc.
+        MDCard:
+            size_hint: .5, .5
+            pos_hint: {"center_x": 0.5, "center_y": 0.5}
+            elevation: 10
+            padding: 25
+            padding: 25
+            halign: 'center'
+
+            # The layout inside the card
+            MDBoxLayout:
+                size_hint: 0.8,0.8
+                orientation: "vertical"
+                pos_hint: {"center_y":0.5, "center_x":0.5}
+                ```
+After setting up the layout of the screen, I added a white rectangle on the screen where I will be placing objects to make it organized. Furthermore, I added a layout inside the card as objects will only be placed inside the MDCard.
+```.py
+                # Title of the screen
+                MDLabel:
+                    id: register_label
+                    text: "Register"
+                    font_size: 60
+```
+Now that the basics of the screen is created, I created the title of the screen ("Register").
+```.py
+                # Text field to input username
+                MDTextField:
+                    id: username_register
+                    hint_text: "username"
+
+                # Text field to input email
+                MDTextField:
+                    id: email_register
+                    hint_text: "email"
+
+                # Text field to input password
+                MDTextField:
+                    id: password_register
+                    hint_text: "password"
+```
+In order for users to register, they would need to input information they will need to log in with. To do so, I am using test field as the place for users input such information. "hint_text" is used to indicate which information users should input in which text field.
+```.py
+                # button to go to the register screen
+                MDRaisedButton:
+                    text: "Register"
+                    size_hint: 1, 0.8
+                    on_release:
+                        root.register()
+                        
+```
+After all the necessary information is inputted, it must be saved on a database. To do so, there is a button called register. The register button will save all the inputted information into a database. To do so, I created a method in Python titled "register()". After the button is clicked, not only will the inputted information be saved into a database, but the screen will also change to the home page.
+
+```.py
+class RegisterScreen(self):
+    pass
+    
+class MainApp(MDApp):
+    pass
+```
+
+ 
