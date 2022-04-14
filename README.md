@@ -156,7 +156,7 @@ ScreenManager:
     TableScreen:
         id: TableScreen
         name: "TableScreen"
-       ```
+```
 The first part of creating the application is to design and code the user interface (UI). The UI allows users to access the program. In the Kivy language (which is what is being used as the KivyMD library is utilized) objects are relative and are layered on top of each other. The code above is to set up all the screens that will be used in the program. 
 
 ```.py
