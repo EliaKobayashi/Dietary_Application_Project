@@ -384,6 +384,7 @@ class TableScreen(MDScreen):
 The code above is to connect the class with the database. Additionally, the query object retrieves all the data from the databases.
 
 ```.py
+        #The first part is the size and position of the table on the screen
         self.data_tables = MDDataTable(
             size_hint=(1, 0.6),
             pos_hint={"center_x": .5, "top": 0.9},
@@ -401,3 +402,38 @@ The code above is to connect the class with the database. Additionally, the quer
         )
 ```
 Using MDDataTable, the position and size of the table on the screen is determined first. Then, the attributes of the nutrient table is written inside the [] next to the "column_date=". The attributes wrriten above should match the spelling and the order of the attributes in the table. The data in the rows of the table in the screen should match all the values of the nutrient table. To do so, I put all query information in the "row_data".
+
+```.py
+    #The function to calculate the total and average calories
+    def calculations(self):
+        db = database("app_database.db")
+        query = db.query_files()
+        total_calories = 0
+        # If not all attributes need to be used you can use _.
+        for row in query:
+            _, _, _, calories, _ = row
+            total_calories += calories
+        average_calories = total_calories/len(query)
+        
+        #To change the texts on the screen
+        self.ids.average_calories.text = f"average: {average_calories} kcal"
+        self.ids.total_calories.text = f"total: {total_calories} kcal"
+
+        db.close()
+``` 
+The last part of the Table Screen is the calculation of the average and total calories. To do so, a for loop is used. If attributes are not being used, you can use an underline. After the calculation is done, the texts on the screen titled "Average calories" and "Total calories" change to numbers.
+
+![](loginscreen.png)
+Figure 9. The login screen
+
+![](registerscreen.png)
+Figure 10. The register screen 
+
+![](homepage.png)
+Figure 11. The home page
+
+![](inputscreen.png)
+Figure 12. The input screen
+
+![](calendar.png)
+Figure 13. The calendar to input dates
