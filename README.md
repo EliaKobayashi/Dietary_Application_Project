@@ -292,7 +292,7 @@ The method create_new_user is used later in the register screen to input new val
         db.close()
         self.parent.current = "HomePage"
 ```
-After setting up the tables in the database, we have to put values inside. For User table, this is done in the register method. This is so that when users click the button called register in the Register Screen, the inputted values will be saved in the Users table. By inputting the information inputted by the users in the paranthesis next to "db.create_new_user", values will be saved in the database. 
+After setting up the tables in the database, we have to put values inside. For the User table, this is done in the register method. This is so that when users click the button called register in the Register Screen, the inputted values will be saved in the Users table. By inputting the information inputted by the users in the paranthesis next to "db.create_new_user", values will be saved in the database. 
 
 ```.py
     def create_new_input(self, protein, fats, carbohydrates, calories, date_picked):
@@ -326,7 +326,7 @@ The method create_new_input is used later in the input screen to input new value
         db.close()
         self.parent.current = "HomePage"
 ```
-For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value(date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
+For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value (date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
 ### Creating the Login System
 
 ```.py
