@@ -13,7 +13,7 @@ The client for this project is Kojiro Matsumoto. He is interested in keeping acc
 1. The application should have a log in system that checks if the email and password is correct
 2. The application should have a register system that registers the inputted username, email, and password.
 3. The passwords of users should be encoded in a secure manner.
-4. After the user logs in, the user should be able to pick whether they want to log their nutrients intake (protein, fat, carbohydrates and calories) or monitor their nutrients intakes.
+4. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
 5. To monitor nutrients intakes, a table will be displayed. The table will display all nutrients informations as well as which date they were inputted.
 6. The application should include cartoon drawings of food for aesthetic purposes.
 7. When the "calculate calories" button is clicked, the average and total calories of the database should show up.
