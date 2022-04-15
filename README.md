@@ -10,8 +10,8 @@ The client for this project is Kojiro Matsumoto. He is interested in keeping acc
 
 ### Success Criteria:
 
-1. The application should have a log in system.
-2. The application should have a register system.
+1. The application should have a log in system that checks if the email and password is correct
+2. The application should have a register system that registers the inputted username, email, and password.
 3. The passwords of users should be encoded in a secure manner.
 4. After the user logs in, the user should be able to pick whether they want to log their PFC intake (protein, fat, carbohydrates and calories) or monitor their PFC intakes.
 5. To monitor PFC intakes, a table will be displayed. The table will display all nutrients informations as well as which date they were inputted.
