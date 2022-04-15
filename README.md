@@ -18,6 +18,7 @@ The client for this project is Kojiro Matsumoto. He is interested in keeping acc
 6. The application should include cartoon drawings of food for aesthetic purposes.
 7. When the "calculate calories" button is clicked, the average and total calories of the database should show up.
 8. When inputting the date, a calendar should appear.
+9. When inputting nutrients intakes, it should be saved and appear on the table screen
 
 ### Design Statement
 
