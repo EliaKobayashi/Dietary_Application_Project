@@ -15,7 +15,7 @@ The client for this project is Kojiro Matsumoto. He is interested in keeping acc
 3. The passwords of users should be encoded in a secure manner.
 4. After the user logs in, the user should be able to pick whether they want to log their PFC intake (protein, fat, carbohydrates and calories) or monitor their PFC intakes.
 5. To monitor PFC intakes, a table will be displayed. The table will display all nutrients informations as well as which date they were inputted.
-6. The application should include cartoon drawings of food for asthetic purposes.
+6. The application should include cartoon drawings of food for aesthetic purposes.
 7. When the "calculate calories" button is clicked, the average and total calories of the database should show up.
 8. When inputting the date, a calendar should appear.
 
