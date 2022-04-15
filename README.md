@@ -15,7 +15,7 @@ The client for this project is Kojiro Matsumoto. He is interested in keeping acc
 3. The passwords of users should be encoded in a secure manner.
 4. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
 5. The application should include cartoon drawings of food for aesthetic purposes.
-6. When the "calculate calories" button is clicked, the average and total calories of the database should show up.
+6. When the "calculate calories" button is clicked, the average and total calories of the table should show up.
 7. When inputting the date, a calendar should appear.
 8. When inputting nutrients intakes, it should be saved and appear on the table screen
 
