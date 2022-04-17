@@ -450,6 +450,9 @@ Figure 12. The input screen
 ![](calendar.png)
 Figure 13. The calendar to input dates
 
+![](table_screenpic.png)
+Figure 14. The table screen
+
 ## Criteria D: Functionality
 
 https://www.youtube.com/watch?v=x0dyokWELlg
