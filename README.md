@@ -27,13 +27,6 @@ I will design and make an application for a client who is interested in keeping 
 
 For the application, we will be using the Python language, as according to CodingNomads, is the most used language used coding language in the world and the langauge I am most comfortable with. If I were to use another language, I would have to learn the new language, slowing the process of creating the application. Additionally, Python is compatible with the library that is being used (KivyMD). Therefore, using Python is most appropriate for this project compared to alternatives such as JavaScript or C. The library I will be using is KivyMD. KivyMD is a library that can be used with Python. According to Analytics Vidhya, KivyMD is extremely easy to use. Therefore, learning the functions of it will not take long. Furthermore, it facilitates cross-platform applications that can run on Windows, Linux, Android, OSX, IOS, and Rasberry Pi as well. Due to its versatilities, I will be using KivyMD instead of alternatives such as Libavg or PyQT. The database I will be using is SQLite. According to SQLitetutorial, SQLite allows  a single database connection to access multiple database files simultaneously. Furthermore, is capable of creating in-memory databases that are fast to work with (SQLite tutorial). Due to this, I have chosen SQLite rather than alternatives such as Oracle Database, MariaDB, or IMB db2.
 
-### Citations
-
-1. Wali, K., Ramnani, M., Krishna, S., &amp; Chatterjee, P. (2021, May 29). 8 python GUI frameworks for developers. Analytics India Magazine. Retrieved February 24, 2022,
-2. What is KivyMD: Creating android machine learning apps using KivyMD. Analytics Vidhya. (2021, July 6). Retrieved February 24, 2022,
-3. What is sqlite? top sqlite features you should know. SQLite Tutorial. (2020, July 8). Retrieved March 9, 2022
-4. Why learn python? 6 reasons why it's so hot right now. CodingNomads. (2022, January 19). Retrieved February 24, 2022, 
-
 ## Criteria B: Solution Overview
 
 ### System Diagram
@@ -453,6 +446,18 @@ Figure 13. The calendar to input dates
 ![](table_screenpic.png)
 Figure 14. The table screen
 
+### Future Updates
+
+As the application is for everyday use, automatic updates would be the optimal type. If users were to manually update each time, it would be tedious. Additioanlly, manual updates would hinder the users' abilities to log their daily nutrients without updating first; which would be go against the overall functionality of the application. This is because the application's purpose is to log daily intakes of nutrients. The inability to do so is against the app's purpose. Updates should occur 1-2 times a month as, according to appify.digital, incremental improvements are better than sopradic overhauls of the app. This is because, if small incrementtal improvements are made and users are critical of them, it is easy to act upon the suggestions. 
+
 ## Criteria D: Functionality
 
 https://www.youtube.com/watch?v=x0dyokWELlg
+
+## Citations
+1. Wali, K., Ramnani, M., Krishna, S., &amp; Chatterjee, P. (2021, May 29). 8 python GUI frameworks for developers. Analytics India Magazine. Retrieved February 24, 2022,
+2. What is KivyMD: Creating android machine learning apps using KivyMD. Analytics Vidhya. (2021, July 6). Retrieved February 24, 2022,
+3. What is sqlite? top sqlite features you should know. SQLite Tutorial. (2020, July 8). Retrieved March 9, 2022
+4. Why learn python? 6 reasons why it's so hot right now. CodingNomads. (2022, January 19). Retrieved February 24, 2022, 
+5. Appify. (2022, February 3). How often should you update your app? Appify. Retrieved April 18, 2022, 
+6. John Elder John is the CEO of Codemy.com where he teaches over 100, Elder, J., *, N., posts, J. E. V. all, &amp; posts, V. all. (1969, March 1). KIVYMD date Picker – Python Kivy Gui tutorial #51. KivyCoder.com. Retrieved April 18, 2022,
