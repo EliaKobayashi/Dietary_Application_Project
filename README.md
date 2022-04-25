@@ -12,12 +12,11 @@ The client for this project is a student at UWC ISAK Japan. He is interested in 
 
 1. The application should have a log in system that checks if the email and password is correct with data validation.
 2. The application should have a register system that registers the inputted username, email, and password.
-3. The passwords of users should be encoded in a secure manner.
-4. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
-5. The application should include cartoon drawings of food for aesthetic purposes.
-6. When the "calculate calories" button is clicked, the average and total calories of the table should show up.
-7. When inputting the date, a calendar should appear.
-8. When inputting nutrients intakes, it should be saved and appear on the table screen
+3. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
+4. The application should include cartoon drawings of food for aesthetic purposes.
+5. When the "calculate calories" button is clicked, the average and total calories of the table should show up.
+6. When inputting the date, a calendar should appear.
+7. When inputting nutrients intakes, it should be saved and appear on the table screen
 
 ### Design Statement
 
