@@ -6,7 +6,7 @@
 
 ### Problem Definition:
  
-The client for this project is Kojiro Matsumoto. He is interested in keeping account of his nutrients intake per meal. Specifically, the intake of protein, fat, carbohydrates, and calories. Due to this, he would like an application that would allow him to keep track of his protein, fat, and calories intake per day.
+The client for this project is a student at UWC ISAK Japan. He is interested in keeping account of his nutrients intake per meal. Specifically, the intake of protein, fat, carbohydrates, and calories. Due to this, he would like an application that would allow him to keep track of his protein, fat, and calories intake per day. He needs an application to do so instead of recording on paper as this he would like to continuously track his nutrients daily for a long period of time. Thus, continuously buying paper would be harmful to the environment as well as storing such papers would be difficult. By using an application, he client does not have to store data as it automatically does so.
 
 ### Success Criteria:
 
