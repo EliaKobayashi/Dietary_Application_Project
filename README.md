@@ -10,7 +10,7 @@ The client for this project is a student at UWC ISAK Japan. He is interested in 
 
 ### Success Criteria:
 
-1. The application should have a log in system that checks if the email and password is correct
+1. The application should have a log in system that checks if the email and password is correct with data validation.
 2. The application should have a register system that registers the inputted username, email, and password.
 3. The passwords of users should be encoded in a secure manner.
 4. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
