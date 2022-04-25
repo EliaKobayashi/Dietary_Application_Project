@@ -14,7 +14,7 @@ The client for this project is a student at UWC ISAK Japan. He is interested in 
 2. The application should have a register system that registers the inputted username, email, and password.
 3. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
 4. The application should include cartoon drawings of food for aesthetic purposes.
-5. When the "calculate calories" button is clicked, the average and total calories of the table should show up.
+5. When the "calculate calories" button is clicked, the average and total calories of the saved records should show up.
 6. When inputting the date, a calendar should appear.
 7. When inputting nutrients intakes, it should be saved and appear on the table screen
 
