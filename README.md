@@ -23,17 +23,17 @@ I will design and make an application for a client who is interested in keeping 
 
 ### Rationale for Proposed Solution
 
-For the application, we will be using the Python language, as according to CodingNomads, is the most used language used coding language in the world and the langauge I am most comfortable with. If I were to use another language, I would have to learn the new language, slowing the process of creating the application. Therefore, using Python is most appropriate for this project compared to alternatives such as JavaScript or C. 
+For the application, I will be using the Python language, as I, the developer am the most comfortable with it and thus will be able to meet the client's demands in a quicker manner as opposed to other languages. Additionally, according to CodingNomads, python is the most used coding language in the world as it has 30% of computer language searches on Google. [1] Due to its popularity, the program can be easily understood by a larger number of developers in comparison to other languages, such as C or Javascript. Python offers a large variety of libraries with can be accessed with simple syntax. This avoids the complexity in using externsl libraries that appears in languages such as C++. However, there are disadvantages to using Python. One of which is Python's inability to run on IOS applications. As IOS takes 27.47% of the smartphome market, this is a is a large disadvantage. However, this application will be run on the computer, therefore, it will not be a problem.
 
-The library I will be using is KivyMD. Using a library is impportant in this application as it is cross-platform and organizes screens through layering. Objects are relative and are layered on top of each other. This makes it easier to organize objects in a screen whch makes learning the functions easy. Furthermore, it facilitates cross-platform applications that can run on Windows, Linux, Android, OSX, IOS, and Rasberry Pi as well. Due to its versatilities, I will be using KivyMD instead of alternatives such as Libavg or PyQT. 
+The library I will be using is KivyMD. Kivy is a library that only works on Python. It is a framework which creates a GUI (graphical user interface) for the developer. Thus, the program does not run on the Python console but on the GUI screen. The language used for Kivy is simple and the logic is written in the Python program. According to Active State, KivyMD has "powerful graphics" which allows for asethetic designs. This is because KivyMD uses application designs of Android. Furthermore, it facilitates cross-platform applications that can run on Windows, Linux, Android, OSX, IOS, and Rasberry Pi as well. Thus, allowing for future developers to expand the application to other platforms. However, KivyMD has bugs with certain features. As my program won't be using complex featurs, this will not be a significant problem. Due to its versatilities, simplicity for learning, and powerful graphics, I will be using KivyMD instead of alternatives such as Libavg or PyQT. 
 
 The database I will be using is SQLite. According to SQLitetutorial, SQLite allows  a single database connection to access multiple database files simultaneously. Furthermore, is capable of creating in-memory databases that are fast to work with (SQLite tutorial). Due to this, I have chosen SQLite rather than alternatives such as Oracle Database, MariaDB, or IMB db2.
 
-## Criteria B: Solution Overview
+## Criteria B: Solution
 
 ### System Diagram
 
-![](systemdiagram.png)
+![](systemdiagram.png)veloper9
 
 Figure 1. The System Diagram For the Application
 
