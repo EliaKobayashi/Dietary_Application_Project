@@ -15,8 +15,7 @@ The client for this project is a student at UWC ISAK Japan. He is interested in 
 3. After the user logs in, the user should be able to pick whether they want to log their nutrients intake or monitor their nutrients intakes.
 4. The application should include cartoon drawings of food for aesthetic purposes.
 5. When the "calculate calories" button is clicked, the average and total calories of the saved records should show up.
-6. When inputting the date, a calendar should appear.
-7. When inputting nutrients intakes, it should be saved and appear on the table screen
+6. When inputting nutrients intakes, it should be saved and data should be persistent with the database.
 
 ### Design Statement
 
@@ -24,7 +23,11 @@ I will design and make an application for a client who is interested in keeping 
 
 ### Rationale for Proposed Solution
 
-For the application, we will be using the Python language, as according to CodingNomads, is the most used language used coding language in the world and the langauge I am most comfortable with. If I were to use another language, I would have to learn the new language, slowing the process of creating the application. Additionally, Python is compatible with the library that is being used (KivyMD). Therefore, using Python is most appropriate for this project compared to alternatives such as JavaScript or C. The library I will be using is KivyMD. KivyMD is a library that can be used with Python. According to Analytics Vidhya, KivyMD is extremely easy to use. Therefore, learning the functions of it will not take long. Furthermore, it facilitates cross-platform applications that can run on Windows, Linux, Android, OSX, IOS, and Rasberry Pi as well. Due to its versatilities, I will be using KivyMD instead of alternatives such as Libavg or PyQT. The database I will be using is SQLite. According to SQLitetutorial, SQLite allows  a single database connection to access multiple database files simultaneously. Furthermore, is capable of creating in-memory databases that are fast to work with (SQLite tutorial). Due to this, I have chosen SQLite rather than alternatives such as Oracle Database, MariaDB, or IMB db2.
+For the application, we will be using the Python language, as according to CodingNomads, is the most used language used coding language in the world and the langauge I am most comfortable with. If I were to use another language, I would have to learn the new language, slowing the process of creating the application. Therefore, using Python is most appropriate for this project compared to alternatives such as JavaScript or C. 
+
+The library I will be using is KivyMD. Using a library is impportant in this application as it is cross-platform and organizes screens through layering. Objects are relative and are layered on top of each other. This makes it easier to organize objects in a screen whch makes learning the functions easy. Furthermore, it facilitates cross-platform applications that can run on Windows, Linux, Android, OSX, IOS, and Rasberry Pi as well. Due to its versatilities, I will be using KivyMD instead of alternatives such as Libavg or PyQT. 
+
+The database I will be using is SQLite. According to SQLitetutorial, SQLite allows  a single database connection to access multiple database files simultaneously. Furthermore, is capable of creating in-memory databases that are fast to work with (SQLite tutorial). Due to this, I have chosen SQLite rather than alternatives such as Oracle Database, MariaDB, or IMB db2.
 
 ## Criteria B: Solution Overview
 
