@@ -98,37 +98,37 @@ Figure 8. The flow diagram is for the query functions. "query_user" is for verif
 | Testing if the table in the table screen shows the appropriate  nutrients informations without glitches or bugs. Additionally, all newly inputted informations should pop up as well. | Non-functional: Load testing    | 1. Open the application 2. Log in 3. Click on the "Table" button                                                                                                                                                                                           | All informations on the table should be appropriate to which column it falls under. Furthermore, if nutrients information is newly added, it should appear on the table.                                                                                                                                                                                                                                                                                            |
 
 ### Record of Tasks
-| Task No. | Planned Action                                           | Time Estimate  | Target Completion Date | Criteria |
-|----------|----------------------------------------------------------|----------------|------------------------|----------|
-| 1        | Brainstorm and write the problem definition              | 15 mins        | February 28            | A        |
-| 2        | Brainstorm and write the success criteria                | 15 mins        | February 28            | A        |
-| 3        | Brainstorm and write the design statement                | 20 mins        | March 2                | A        |
-| 4        | Brainstorm and write the rationale for proposed solution | 30 mins        | March 2                | A        |
-| 5        | Write citations                                          | 15 mins        | March 2                | A        |
-| 6        | Write the details of the application                     | 20 mins        | March 2                | A        |
-| 7        | Draw and describe the ER diagram                         | 20 mins        | March 4                | B        |
-| 8        | Draw and describe the table of data                      | 15 mins        | March 4                | B        |
-| 9        | Draw and describe the UML diagram                        | 15 mins        | March 4                | B        |
-| 10       | Code the log in screen                                   | 1 hour         | March 7                | C        |
-| 11       | Code the register screen                                 | 1 hour         | March 9                | C        |
-| 12       | Meeting with client                                      | 5 minutes      | March 10               | A        |
-| 13       | Code switches between screens                            | 30 mins        | March 10               | C        |
-| 14       | Code inserting inputs of the user to the databse         | 50 mins        | March 10               | C        |
-| 15       | Code the encryption of passwords using hash              | 40 mins        | March 28               | C        |
-| 16       | Meeting with client                                      | 5 minutes      | March 28               | A        |
-| 17       | Fix up the register screen                               | 15 mins        | March 30               | C        |
-| 18       | Fix up the hash password encryption                      | 15 mins        | March 30               | C        |
-| 18       | Draw and describe the flow diagrams                      | 20 mins        | March 31               | A        |
-| 19       | Create the Input screen                                  | 30 minutes     | April 2                | C        |
-| 20       | Create the nutrient table                                | 30 minutes     | April 2                | C        |
-| 21       | Create the Table screen                                  | 45 minutes     | April 8                | C        |
-| 22       | Fix the Table Screen                                     | 2 hours        | April 10               | C        |
-| 23       | Create a calendar for the date                           | 25 mins        | April 11               | C        |
-| 24       | Create the calculation for calories                      | 30 mins        | April 13               | C        |
-| 25       | Write the test plans                                     | 30 mins        | April 13               | C        |
-| 26       | Meeting with client for final product                    | 15 mins        | April 13               | A        |
-| 27       | Finish Criteria C                                        | 2 hours        | April 14               | C        |
-| 28       | Finish video for Criteria D                              | 1 hour 30 mins | April 15               | D        |
+| Task No. | Planned Action                                           | Time Estimate  | Target Completion Date | Criteria | Design Cycle |
+|----------|----------------------------------------------------------|----------------|------------------------|----------|--------------|
+| 1        | Brainstorm and write the problem definition              | 15 mins        | February 28            | A        | Planning     |
+| 2        | Brainstorm and write the success criteria                | 15 mins        | February 28            | A        | Planning     |
+| 3        | Brainstorm and write the design statement                | 20 mins        | March 2                | A        | Planning     |
+| 4        | Brainstorm and write the rationale for proposed solution | 30 mins        | March 2                | A        | Planning     |
+| 5        | Write citations                                          | 15 mins        | March 2                | A        | Planning     |
+| 6        | Write the proposed solition of the application           | 20 mins        | March 2                | A        | Planning     |
+| 7        | Draw and describe the ER diagram                         | 20 mins        | March 4                | B        | Design       |
+| 8        | Draw and describe the table of data                      | 15 mins        | March 4                | B        | Design       |
+| 9        | Draw and describe the UML diagram                        | 15 mins        | March 4                | B        | Design       |
+| 10       | Code the log in screen                                   | 1 hour         | March 7                | C        | Development  |
+| 11       | Code the register screen                                 | 1 hour         | March 9                | C        | Development  |
+| 12       | Meeting with client                                      | 5 minutes      | March 10               | A        | Evaluation   |
+| 13       | Code switches between screens                            | 30 mins        | March 10               | C        | Development  |
+| 14       | Code inserting inputs of the user to the databse         | 50 mins        | March 10               | C        | Development  |
+| 15       | Code the encryption of passwords using hash              | 40 mins        | March 28               | C        | Development  |
+| 16       | Meeting with client                                      | 5 minutes      | March 28               | A        | Evaluation   |
+| 17       | Fix up the register screen                               | 15 mins        | March 30               | C        | Development  |
+| 18       | Fix up the hash password encryption                      | 15 mins        | March 30               | C        | Development  |
+| 18       | Draw and describe the flow diagrams                      | 20 mins        | March 31               | B        | Design       |
+| 19       | Create the Input screen                                  | 30 minutes     | April 2                | C        | Development  |
+| 20       | Create the nutrient table                                | 30 minutes     | April 2                | C        | Development  |
+| 21       | Create the Table screen                                  | 45 minutes     | April 8                | C        | Development  |
+| 22       | Fix the Table Screen                                     | 2 hours        | April 10               | C        | Development  |
+| 23       | Create a calendar for the date                           | 25 mins        | April 11               | C        | Development  |
+| 24       | Create the calculation for calories                      | 30 mins        | April 13               | C        | Development  |
+| 25       | Write the test plans                                     | 30 mins        | April 13               | C        | Development  |
+| 26       | Meeting with client for final product                    | 15 mins        | April 13               | A        | Evaluation   |
+| 27       | Finish Criteria C                                        | 2 hours        | April 14               | C        | Development  |
+| 28       | Finish video for Criteria D                              | 1 hour 30 mins | April 15               | D        | Evaluation   |
 
 ## Criteria C: Development
 
@@ -152,7 +152,7 @@ ScreenManager:
         name: "LoginScreen"
 
     RegisterScreen:
-        name: "RegisterScreen"
+        name: "RegisterScreen" 
 
     HomePage:
         name: "HomePage"
@@ -278,7 +278,7 @@ To create tables, I am using sqlite3 as the database. The code above is the conn
         """)
         self.connection.commit()
 ```
-The function above is to create the two tables ("Users", "nutrient") I need based on my diagrams. Each row after inside the paranthesis of a table represents an attribute in the table. The first word is the name of the attribute. After the names of the attributes, the type of attribute is declared. The values are inputted in the LoginScreen class and the InputScreen class.
+The method above is to create the two tables ("Users", "nutrient") I need based on my diagrams. Each row after inside the paranthesis of a table represents an attribute in the table. The first word is the name of the attribute. After the names of the attributes, the type of attribute is declared. The values are inputted in the LoginScreen class and the InputScreen class.
 ### Saving Values Into Tables
 
 ```.py
