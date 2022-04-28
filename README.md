@@ -196,6 +196,7 @@ The code above is an example of how the design of the screen is first set up. Th
                 pos_hint: {"center_y":0.5, "center_x":0.5}
                 ```
 After setting up the layout of the screen, I added a white rectangle on the screen where I will be placing objects to make it organized. Furthermore, I added a layout inside the card as objects will only be placed inside the MDCard. 
+
 ```.py
                 # Title of the screen
                 MDLabel:
@@ -234,6 +235,8 @@ After all the necessary information is inputted, it must be saved on a database.
 
 When placing the objects inside the MDCard, I struggled with organizing each object. I did not know that a box layout was necessary inside the card to ensure that the objects stayed inside the white rectangle. Without putting a box layout inside the, objects such as the textfield exceeded the borders of the MDCard.
 
+Additionally, I struggled with stating the size of a button. This is because if a button is too big, an error occurs and the program is not able to run. This took some time to figure out the right button size for the screen.
+
 ```.py
 class RegisterScreen(self):
     pass
@@ -243,6 +246,8 @@ class MainApp(MDApp):
         pass
 ```
 Although the UI is designed, logic is necessary to make all the functions work. To do so, I created a Python file that compliments the KivyMD file. You need a class for each screen and a class for the app itself. The class names of the screens must match the names of the screens written in the KivyMD file. Meanwhile, the name of the app class must be the same as the name of the KivyMD file. The code above does not include all the methods and objects in my RegisterScreen file. I wrote pass simply to show the logic of the Python file.
+
+In the beginning, after designing the GUI of the screen, the name of the screen did not correspond with the name that was set on the Kivy file. Due to this, there was an error and the program did not run.
 
 ### Creating Tables
  
@@ -290,11 +295,13 @@ The method above is to create the two tables ("Users", "nutrient") I need based 
 ```
 The method create_new_user is used later in the register screen to input new values into the Users table
 
+The area I struggled with in this method is ensuring that the password is hashed. I wasn't aware that randomizing between 1 to 1000000 and placing "encrypt_password(password)" as the value for the password attribute was necessary. Due to this, it took a while before the password appeared hashed in the database.
+
 ```.py
     # Function to save the registered information in the database
     def register(self):
         email_entered = self.ids.email_register.text
-        username_entered = self.ids.username_register.text
+        username_entered = self.ids.username_register.text 
         password_entered = self.ids.password_register.text
         db = database("app_database.db")
         db.create_new_user(username=username_entered, email=email_entered, password=password_entered)
@@ -336,6 +343,9 @@ The method create_new_input is used later in the input screen to input new value
         self.parent.current = "HomePage"
 ```
 For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value (date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
+
+An area I struggled with is inputting the date chosen in the calendar into the table of nutrients. I wasn't aware that I had to specify that the object "select_date" derives from the class "InputScreen". After writing "InputScreen.select_date", the calendar date was able to be saved in the nutrients table.
+
 ### Creating the Login System
 
 ```.py
