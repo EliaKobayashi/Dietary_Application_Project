@@ -58,7 +58,7 @@ As shown in figure 3, in the "nutrients" table, the attributes are "protein", "f
 
 ### Table of Data
 
-![](table_comp.jpeg)
+![](9FD581E1-0C94-49A7-802B-8C741BFBEAFB.jpeg)
 
 Figure 4. A Table Representing the Data In the ER Diagram
 
