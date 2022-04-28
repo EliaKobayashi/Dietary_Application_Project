@@ -193,7 +193,7 @@ The code above is an example of how the design of the screen is first set up. Th
                 orientation: "vertical"
                 pos_hint: {"center_y":0.5, "center_x":0.5}
                 ```
-After setting up the layout of the screen, I added a white rectangle on the screen where I will be placing objects to make it organized. Furthermore, I added a layout inside the card as objects will only be placed inside the MDCard.
+After setting up the layout of the screen, I added a white rectangle on the screen where I will be placing objects to make it organized. Furthermore, I added a layout inside the card as objects will only be placed inside the MDCard. 
 ```.py
                 # Title of the screen
                 MDLabel:
@@ -228,7 +228,9 @@ In order for users to register, they would need to input information they will n
                         root.register()
                         
 ```
-After all the necessary information is inputted, it must be saved on a database. To do so, there is a button called register. The register button will save all the inputted information into a database. To do so, I created a method in Python titled "register()". After the button is clicked, not only will the inputted information be saved into a database, but the screen will also change to the home page.
+After all the necessary information is inputted, it must be saved on a database. To do so, there is a button called register. The register button will save all the inputted information into a database. To do so, I created a method in Python titled "register()". After the button is clicked, not only will the inputted information be saved into a database, but the screen will also change to the home page. 
+
+When placing the objects inside the MDCard, I struggled with organizing each object. I did not know that a box layout was necessary inside the card to ensure that the objects stayed inside the white rectangle. Without putting a box layout inside the, objects such as the textfield exceeded the borders of the MDCard.
 
 ```.py
 class RegisterScreen(self):
