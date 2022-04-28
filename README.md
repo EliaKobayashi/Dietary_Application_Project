@@ -50,11 +50,11 @@ As shown in Fig.2, the wire frame details the plan as to how the application wil
 
 ### ER Diagram
 
-![](erdiagram3.jpeg)
+![](59D2DE38-3A28-44AC-92FB-BA50FEECF4EF.jpeg)
 
 Figure 3. ER Diagram For the Attributes Requested By the Client
 
-As shown in figure 3, in the "nutrients" table, the attributes are "protein", "fats", "calories", "carbohydrates", "day_picked". This table details all the nutrients that the client would like to log into the application. The second class which is "User" has the attributes "id", "username", "email", "password". This class details the email and information as well as log in information of the users.
+As shown in figure 3, in the "nutrients" table, the attributes are "protein", "fats", "calories", "carbohydrates", "day_picked". This table details all the nutrients that the client would like to log into the application. The second class which is "User" has the attributes "id", "username", "email", "password". This class details the email and information as well as log in information of the users. "Id" is the primary key and what connects the two tables.
 
 ### Table of Data
 
