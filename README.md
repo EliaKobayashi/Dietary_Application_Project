@@ -365,6 +365,9 @@ An area I struggled with is inputting the date chosen in the calendar into the t
             self.ids.login_label.text = "User does not exist"
 ```
 To log in, I created a system so that the method checks whether the inputted email is in the database. If it is not, the title text changed to "User does not exist". If the email is correct, the method checks if the password is correct and corresponding to the email. If it does not, the title text changes to "password is incorrect", If the password is correct, the screen changed to the home page.
+
+Initially, I had only had one if statement. However, this did not work as the program needs to query if the email is in the database before querying if the password corresponds with the email. Thus, I seperated the querying of the email and password.
+
 ### Creating the Home Page
 
 ```.py
@@ -388,6 +391,7 @@ class HomePage(MDScreen):
         self.parent.current = "TableScreen"
 ```
 The home page is quite simple with only four buttons. The first changing the screen to the Login screen. The second changing the screen to the Input screen. The third changing the screen to the Monitor screen. Lastly, changing the screen to the Table screen.
+
 ### Creating the Table Screen
 
 ```.py
@@ -441,6 +445,8 @@ Using MDDataTable, the position and size of the table on the screen is determine
         db.close()
 ``` 
 The last part of the Table Screen is the calculation of the average and total calories. To do so, a for loop is used. If attributes are not being used, you can use an underline. After the calculation is done, the texts on the screen titled "Average calories" and "Total calories" change to numbers.
+
+In the object "_, _, _, calories, _", the underlines represent the attributes of the table that is not being used in the method above. However, the order in which you write the attributes affects whether the program works. The order has to match that of the table. thus, when first developing this method, I ordered it as "calories, _, _, _, _" which resulted in an error when I ran the program.
 
 ![](loginscreen.png)
 Figure 9. The login screen
