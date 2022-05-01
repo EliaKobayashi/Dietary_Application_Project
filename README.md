@@ -233,10 +233,6 @@ In order for users to register, they would need to input information they will n
 ```
 After all the necessary information is inputted, it must be saved on a database. To do so, there is a button called register. The register button will save all the inputted information into a database. To do so, I created a method in Python titled "register()". After the button is clicked, not only will the inputted information be saved into a database, but the screen will also change to the home page. 
 
-When placing the objects inside the MDCard, I struggled with organizing each object. I did not know that a box layout was necessary inside the card to ensure that the objects stayed inside the white rectangle. Without putting a box layout inside the, objects such as the textfield exceeded the borders of the MDCard.
-
-Additionally, I struggled with stating the size of a button. This is because if a button is too big, an error occurs and the program is not able to run. This took some time to figure out the right button size for the screen.
-
 ```.py
 class RegisterScreen(self):
     pass
@@ -246,8 +242,6 @@ class MainApp(MDApp):
         pass
 ```
 Although the UI is designed, logic is necessary to make all the functions work. To do so, I created a Python file that compliments the KivyMD file. You need a class for each screen and a class for the app itself. The class names of the screens must match the names of the screens written in the KivyMD file. Meanwhile, the name of the app class must be the same as the name of the KivyMD file. The code above does not include all the methods and objects in my RegisterScreen file. I wrote pass simply to show the logic of the Python file.
-
-In the beginning, after designing the GUI of the screen, the name of the screen did not correspond with the name that was set on the Kivy file. Due to this, there was an error and the program did not run.
 
 ### Creating Tables
  
@@ -260,7 +254,7 @@ In the beginning, after designing the GUI of the screen, the name of the screen 
      def close(self):
         self.connection.close()
 ```  
-To create tables, I am using sqlite3 as the database. The code above is the conncetion between Python and the sqlite database. The benefits of using sqlite is that it is really easy to use with Python. I simply have to create a class with their attributes in it which will be shown in the next piece of code.
+To create data tables, I am using sqlite3 as the database. The code above is the conncetion between Python and the sqlite database. The benefits of using sqlite is that it is really easy to use with Python. I simply have to create a class with their attributes in it which will be shown in the next piece of code. 
 
 ```.py
    # Function to create a table that includes the login details of a user
@@ -285,7 +279,8 @@ To create tables, I am using sqlite3 as the database. The code above is the conn
         """)
         self.connection.commit()
 ```
-The method above is to create the two tables ("Users", "nutrient") I need based on my diagrams. Each row after inside the paranthesis of a table represents an attribute in the table. The first word is the name of the attribute. After the names of the attributes, the type of attribute is declared. The values are inputted in the LoginScreen class and the InputScreen class.
+The method above is to create the two tables ("Users", "nutrient") I need based on my diagrams. This is so that different attributes can be saved in different data tables. Each row after inside the paranthesis of a table represents an attribute in the table. The first word is the name of the attribute. After the names of the attributes, the type of attribute is declared. The values are inputted in the RegisterScreen class and the InputScreen class.
+
 ### Saving Values Into Tables
 
 ```.py
@@ -293,9 +288,7 @@ The method above is to create the two tables ("Users", "nutrient") I need based 
         self.cursor.execute("INSERT into Users values(?,?,?,?)", (random.randint(1,1000000), username, email, encrypt_password(password)))
         self.connection.commit()
 ```
-The method create_new_user is used later in the register screen to input new values into the Users table
-
-The area I struggled with in this method is ensuring that the password is hashed. I wasn't aware that randomizing between 1 to 1000000 and placing "encrypt_password(password)" as the value for the password attribute was necessary. Due to this, it took a while before the password appeared hashed in the database.
+In order to input new values into the User table, a method called "create_new_user" is created. The method encrypts the password for privacy reasons and uses hash. This method is used in the register table where users can register their log in information which will be saved in the User table to be used when they log in.
 
 ```.py
     # Function to save the registered information in the database
@@ -308,14 +301,14 @@ The area I struggled with in this method is ensuring that the password is hashed
         db.close()
         self.parent.current = "HomePage"
 ```
-After setting up the tables in the database, we have to put values inside. For the User table, this is done in the register method. This is so that when users click the button called register in the Register Screen, the inputted values will be saved in the Users table. By inputting the information inputted by the users in the paranthesis next to "db.create_new_user", values will be saved in the database. 
+After setting up the tables in the database, we have to put values inside. For the User table, this is done in the register method. This is so that when users click the button called register in the RegisterScreen, the inputted values will be saved in the Users table. By inputting the information inputted by the users in the paranthesis next to "db.create_new_user", values will be saved in the database. 
 
 ```.py
     def create_new_input(self, protein, fats, carbohydrates, calories, date_picked):
         self.cursor.execute(f"INSERT into nutrient values('{protein}','{fats}','{carbohydrates}','{calories}','{date_picked}');")
         self.connection.commit()
 ```
-The method create_new_input is used later in the input screen to input new values into the nutrient table.
+The same thing goes for inputting nutrients values. A method, called "create_new_input", is created in the "database" class to insert new values into the nutrient table. This method is used later on in the InputScreen. 
 
 ```.py
     def on_save(self, value):
@@ -342,9 +335,7 @@ The method create_new_input is used later in the input screen to input new value
         db.close()
         self.parent.current = "HomePage"
 ```
-For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value (date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
-
-An area I struggled with is inputting the date chosen in the calendar into the table of nutrients. I wasn't aware that I had to specify that the object "select_date" derives from the class "InputScreen". After writing "InputScreen.select_date", the calendar date was able to be saved in the nutrients table.
+For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is because it is easier for the client to input dates using a calendar. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value (date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
 
 ### Creating the Login System
 
@@ -364,9 +355,7 @@ An area I struggled with is inputting the date chosen in the calendar into the t
         else:
             self.ids.login_label.text = "User does not exist"
 ```
-To log in, I created a system so that the method checks whether the inputted email is in the database. If it is not, the title text changed to "User does not exist". If the email is correct, the method checks if the password is correct and corresponding to the email. If it does not, the title text changes to "password is incorrect", If the password is correct, the screen changed to the home page.
-
-Initially, I had only had one if statement. However, this did not work as the program needs to query if the email is in the database before querying if the password corresponds with the email. Thus, I seperated the querying of the email and password.
+The login screen has to verify if the inputted email and password correspond and are in the User data table. To do so, the program first checks whether the inputted email is in the database. If it is not, the title text changed to "User does not exist". If the email is correct, the method checks if the password is correct and corresponding to the email. If it does not, the title text changes to "password is incorrect", If the password is correct, the screen changed to the home page. The program checks the email and password in seperate steps so that the computer can easily identify which input is wrong.
 
 ### Creating the Home Page
 
@@ -390,7 +379,7 @@ class HomePage(MDScreen):
     def go_to_TableScreen(self):
         self.parent.current = "TableScreen"
 ```
-The home page is quite simple with only four buttons. The first changing the screen to the Login screen. The second changing the screen to the Input screen. The third changing the screen to the Monitor screen. Lastly, changing the screen to the Table screen.
+The purpose of the HomePage is only to direct the user to different pages. Thus, there are different methods that change the screen according to the user's choice. The code above is the logic that connects to the buttons coded in the KivyMD file.
 
 ### Creating the Table Screen
 
@@ -404,7 +393,7 @@ class TableScreen(MDScreen):
         query = db.query_files()
         db.close()
 ```
-The code above is to connect the class with the database. Additionally, the query object retrieves all the data from the databases.
+The table screen has to display the nutrient data table due to the client's request to be able to monitor the logged nutrient values. To do so, the method must first connect the class to the database. Then, it uses a query method from the "database" class to retrieve the data tables from the database to be displayed on the screen.
 
 ```.py
         #The first part is the size and position of the table on the screen
@@ -424,7 +413,7 @@ The code above is to connect the class with the database. Additionally, the quer
             row_data=query
         )
 ```
-Using MDDataTable, the position and size of the table on the screen is determined first. Then, the attributes of the nutrient table is written inside the [] next to the "column_date=". The attributes wrriten above should match the spelling and the order of the attributes in the table. The data in the rows of the table in the screen should match all the values of the nutrient table. To do so, I put all query information in the "row_data".
+In order to display the nutrient table, which is a requirement in the sucess criteria, the size of it on the screen has to be determined. Next, the columns of the table (attributes) has to be displayed. To do so, the name of the attributes along with the number of pixels required is written in the object called "column_data". Then, the values of each attribute in the data table must be displayed in the table on the screen. A method called query in the database class is inputted as the row_data. After these three steps, the nutrient table from the database is displayed onto the TableScreen.
 
 ```.py
     #The function to calculate the total and average calories
@@ -444,9 +433,7 @@ Using MDDataTable, the position and size of the table on the screen is determine
 
         db.close()
 ``` 
-The last part of the Table Screen is the calculation of the average and total calories. To do so, a for loop is used. If attributes are not being used, you can use an underline. After the calculation is done, the texts on the screen titled "Average calories" and "Total calories" change to numbers.
-
-In the object "_, _, _, calories, _", the underlines represent the attributes of the table that is not being used in the method above. However, the order in which you write the attributes affects whether the program works. The order has to match that of the table. thus, when first developing this method, I ordered it as "calories, _, _, _, _" which resulted in an error when I ran the program.
+To fulfill the requirement written down in the sucess criteria of calculating the average and total calories of the saved records, the code above is the logic that connects to the "calculate calories" button on the screen. To do so, the method retrieves all the values inside the attribute called "calories" and calculates the total and average. 
 
 ![](loginscreen.png)
 Figure 9. The login screen
