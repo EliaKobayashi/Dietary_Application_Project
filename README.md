@@ -6,7 +6,7 @@
 
 ### Problem Definition:
  
-The client for this project is a student at UWC ISAK Japan. He has a hobby of exercising and eating. To ensure that he is eating healthy, he is interested in keeping account of his personal nutrients intake per meal. Specifically, the intake of protein, fat, carbohydrates, and calories. Due to this, he would like an application that would allow him to keep track of his protein, fat, and calories intake per day. Additionally, he would like to monitor his nutrients intakes. He would also like the application to have a GUI and has accessible butttons and text boxes to make the application easy to use. He needs an application to do so instead of recording on paper as he would like to continuously track his nutrients daily for a long period of time. Thus, continuously buying paper would be harmful to the environment as well as storing such papers would be difficult. The client also will have to continuously buy paper. By using an application that connects to a database, the client does not have to store data manually as it automatically does so and will not have to spend extra money on buying paper. Additionally, it is less harmful to the environment.
+The client for this project is a student at UWC ISAK Japan. He has a hobby of exercising and eating. To ensure that he is eating healthy, he is interested in keeping account of his personal nutrients intake per meal. Specifically, the intake of protein, fat, carbohydrates, and calories. Due to this, he would like an application that would allow him to keep track of his protein, fat, and calories intake per day. Additionally, he would like to monitor his nutrients intakes. He would also like the application to have a GUI and has accessible butttons and text boxes to make the application easy to use. He needs an application to do so instead of recording on paper as he would like to continuously track his nutrients daily for a long period of time. Thus, continuously buying paper would be harmful to the environment as well as storing such papers would be difficult. By using an application that connects to a database, the client does not have to store data manually as it automatically does so and will not have to spend extra money on buying paper. Additionally, it is less harmful to the environment.
 
 ### Success Criteria:
 
@@ -78,7 +78,7 @@ As shown in figure 5. the UML diagram shows the attribuites and the methods for 
 
 Figure 6. The UML diagram for the classes of the program
 
-The diagram above showcases the attributes and methods that are used in each class. Classes attached to MDScreen showcase the classes that are the logic for each screen. The class database is the class that creates the data tables. The class attached to MDApp is the builder class for the program.
+The diagram above showcases 
 
 ### Flow Diagrams
 
@@ -341,7 +341,7 @@ The same thing goes for inputting nutrients values. A method, called "create_new
         db.close()
         self.parent.current = "HomePage"
 ```
-For the nutrient table, I am saving the values inputted by the users in the input screen. To input dates, a calendar will appear when the "date" button is clicked. This is because it is easier for the client to input dates using a calendar. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value (date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
+For the nutrient table, I am saving the values inputted by the users in the input screen. This is to fulfill the need of the client which is to monitor saved records. To input dates, a calendar will appear when the "date" button is clicked. This is because it is easier for the client to input dates using a calendar. This is done through using MDDatePicker() in the input_date method. Once a date is clicked, its value (date) will be saved in the date_picked attribute. By using "InputScreen.select_date" I am able to use a value from another method. Values are placed in the paranthesis next to "db.create_new_input" to save it in the table.
 
 ### Creating the Login System
 
