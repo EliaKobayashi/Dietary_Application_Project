@@ -74,19 +74,23 @@ Figure 5. The UML Diagram For the Classes In the Application
 
 As shown in figure 5. the UML diagram shows the attribuites and the methods for the two classes. There are only "get" methods as the application's function is only to store data display it at the request of the users.
 
+![](
+
+Figure 6.
+
 ### Flow Diagrams
 
 ![](3_flowdiagram.jpeg)
 
-Figure 6. The flow diagram for when users try loggin in. If the password is correct, they are directed to the home page. On the other hand, if the password is incorrect, it prints out "User does not exist".
+Figure 7. The flow diagram for when users try loggin in. If the password is correct, they are directed to the home page. On the other hand, if the password is incorrect, it prints out "User does not exist".
 
 ![](3_flowdiagram2.jpeg)
 
-Figure 7. The flow diagram is for calculating the average and total calories according to the database. There is a button on the screen titled "calculate calories". When pressed, the total and average calories poop up.
+Figure 8. The flow diagram is for calculating the average and total calories according to the database. There is a button on the screen titled "calculate calories". When pressed, the total and average calories poop up.
 
 ![](3_flowdiagram3.jpeg)
 
-Figure 8. The flow diagram is for the query functions. "query_user" is for verifying if the password entered in the login screen is correct to their email. Meanwhile, "query_files" is for fetching all the data from the "nutrient" table and will be put in the Table Screen.
+Figure 9. The flow diagram is for the query functions. "query_user" is for verifying if the password entered in the login screen is correct to their email. Meanwhile, "query_files" is for fetching all the data from the "nutrient" table and will be put in the Table Screen.
 
 ### Test Plan
 
@@ -436,22 +440,22 @@ In order to display the nutrient table, which is a requirement in the sucess cri
 To fulfill the requirement written down in the sucess criteria of calculating the average and total calories of the saved records, the code above is the logic that connects to the "calculate calories" button on the screen. To do so, the method retrieves all the values inside the attribute called "calories" and calculates the total and average. 
 
 ![](loginscreen.png)
-Figure 9. The login screen
+Figure 10. The login screen
 
 ![](registerscreen.png)
-Figure 10. The register screen 
+Figure 11. The register screen 
 
 ![](homepage.png)
-Figure 11. The home page
+Figure 12. The home page
 
 ![](inputscreen.png)
-Figure 12. The input screen
+Figure 13. The input screen
 
 ![](calendar.png)
-Figure 13. The calendar to input dates
+Figure 14. The calendar to input dates
 
 ![](table_screenpic.png)
-Figure 14. The table screen
+Figure 15. The table screen
 
 ### Future Updates
 
