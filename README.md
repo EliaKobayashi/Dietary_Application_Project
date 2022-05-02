@@ -459,7 +459,7 @@ As the application is for everyday use, automatic updates would be the optimal t
 
 ## Criteria D: Functionality
 
-https://www.youtube.com/watch?v=x0dyokWELlg
+https://youtu.be/iYfPlHdYTwU
 
 ## Citations
 1. Wali, K., Ramnani, M., Krishna, S., &amp; Chatterjee, P. (2021, May 29). 8 python GUI frameworks for developers. Analytics India Magazine. Retrieved February 24, 2022,
