@@ -74,9 +74,11 @@ Figure 5. The UML Diagram For the Classes In the Application
 
 As shown in figure 5. the UML diagram shows the attribuites and the methods for the two classes. There are only "get" methods as the application's function is only to store data display it at the request of the users.
 
-![](
+![](2C588556-4E5D-4788-9216-68AF6A90B767.jpeg)
 
-Figure 6.
+Figure 6. The UML diagram for the classes of the program
+
+The diagram above showcases the attributes and methods that are used in each class. Classes attached to MDScreen showcase the classes that are the logic for each screen. The class database is the class that creates the data tables. The class attached to MDApp is the builder class for the program.
 
 ### Flow Diagrams
 
